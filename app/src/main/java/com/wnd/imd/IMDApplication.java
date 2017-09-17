@@ -13,14 +13,23 @@ import com.wnd.imd.di.NetworkingModule;
 
 public class IMDApplication extends Application {
 
-    ApplicationComponent applicationComponent;
+    private ApplicationComponent applicationComponent;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        applicationComponent = createComponent();
+    }
+
+    public ApplicationComponent createComponent() {
         applicationComponent = DaggerApplicationComponent.builder()
                 .applicationModule(new ApplicationModule(this))
                 .networkingModule(new NetworkingModule())
                 .build();
+        return applicationComponent;
+    }
+
+    public ApplicationComponent getApplicationComponent() {
+        return applicationComponent;
     }
 }

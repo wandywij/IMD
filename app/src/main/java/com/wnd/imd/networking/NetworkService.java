@@ -9,5 +9,5 @@ import io.reactivex.Observable;
  */
 
 public interface NetworkService {
-    Observable<PSIResponseModel> psiResponse();
+    Observable<PSIResponseModel> getPSIIndex();
 }

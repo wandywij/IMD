@@ -6,4 +6,5 @@ package com.wnd.imd;
 
 public class Constant {
     public static final String BASE_URL = "https://api.data.gov.sg/v1/";
+    public static final String API_KEY = "wEda0zhxMG3xWQG7hwQzWBs7rn9FGihO";
 }

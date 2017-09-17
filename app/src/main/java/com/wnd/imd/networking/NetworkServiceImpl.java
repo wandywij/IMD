@@ -17,7 +17,7 @@ public class NetworkServiceImpl implements NetworkService {
     }
 
     @Override
-    public Observable<PSIResponseModel> psiResponse() {
+    public Observable<PSIResponseModel> getPSIIndex() {
         return apiService.getPSI();
     }
 }
