@@ -1,7 +1,8 @@
-package com.wnd.imd;
+package com.wnd.imd.di;
 
 import android.util.Log;
 
+import com.wnd.imd.MockedAPIService;
 import com.wnd.imd.di.NetworkingModule;
 import com.wnd.imd.networking.APIService;
 
