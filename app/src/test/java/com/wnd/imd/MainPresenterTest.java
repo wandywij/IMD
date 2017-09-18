@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.wnd.imd.interactor.PSIInteractor;
 import com.wnd.imd.networking.APIService;
 import com.wnd.imd.networking.response.PSIResponseModel;
+import com.wnd.imd.psi.MainPresenter;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -30,12 +31,14 @@ public class MainPresenterTest {
 
     @Mock
     PSIInteractor psiInteractor;
+    MainPresenter mainPresenter;
 
     private final String HEALTHY = "healthy";
 
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
+        mainPresenter = new MainPresenter(psiInteractor);
     }
 
     @Test
@@ -54,11 +57,10 @@ public class MainPresenterTest {
 
     @Test
     public void networkShouldReturnException() {
-        PSIResponseModel psiResponseModel = new Gson().fromJson(MockedAPIService.dummyJSON, PSIResponseModel.class);
         when(psiInteractor.getPSI()).thenReturn(Observable.create(new ObservableOnSubscribe<PSIResponseModel>() {
             @Override
             public void subscribe(@NonNull ObservableEmitter<PSIResponseModel> e) throws Exception {
-                e.onError(new IOException(Constant.IS_NO_INTERNET_CONNECTION));
+                e.onError(mainPresenter.getIOException());
             }
         }));
         psiInteractor.getPSI()
@@ -72,6 +74,28 @@ public class MainPresenterTest {
                     public void accept(@NonNull Throwable throwable) throws Exception {
                         Assert.assertTrue(throwable instanceof IOException);
                         Assert.assertEquals(throwable.getMessage(), Constant.IS_NO_INTERNET_CONNECTION);
+                    }
+                });
+    }
+
+    @Test
+    public void responseShouldReturnException() {
+        when(psiInteractor.getPSI()).thenReturn(Observable.create(new ObservableOnSubscribe<PSIResponseModel>() {
+            @Override
+            public void subscribe(@NonNull ObservableEmitter<PSIResponseModel> e) throws Exception {
+                e.onError(mainPresenter.getException());
+            }
+        }));
+        psiInteractor.getPSI()
+                .subscribe(new Consumer<PSIResponseModel>() {
+                    @Override
+                    public void accept(@NonNull PSIResponseModel psiResponseModel) throws Exception {
+
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(@NonNull Throwable throwable) throws Exception {
+                        Assert.assertTrue(throwable instanceof Exception);
                     }
                 });
     }

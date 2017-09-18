@@ -41,9 +41,9 @@ public class MainPresenter {
                     @Override
                     public void accept(@NonNull Throwable throwable) throws Exception {
                         if(throwable instanceof IOException) {
-                            behaviorSubject.onError(new IOException(Constant.IS_NO_INTERNET_CONNECTION));
+                            behaviorSubject.onError(getIOException());
                         } else {
-                            behaviorSubject.onError(new Exception());
+                            behaviorSubject.onError(getException());
                         }
                         behaviorSubject.onComplete();
                     }
@@ -56,5 +56,15 @@ public class MainPresenter {
                 observeOn(AndroidSchedulers.mainThread())
                 .subscribe(getPSIResponseModel, throwableConsumer);
     }
+
+    public IOException getIOException() {
+        return new IOException(Constant.IS_NO_INTERNET_CONNECTION);
+    }
+
+    public Exception getException() {
+        return new Exception();
+    }
+
+
 
 }

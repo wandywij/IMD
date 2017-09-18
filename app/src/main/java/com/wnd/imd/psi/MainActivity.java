@@ -65,12 +65,11 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         }, new Consumer<Throwable>() {
             @Override
             public void accept(@NonNull Throwable throwable) throws Exception {
-                if(throwable instanceof IOException) {
+                if (throwable instanceof IOException) {
                     showNoConnectionDialog();
                 } else {
                     showErrorDialog();
                 }
-
             }
         });
     }
