@@ -1,4 +1,4 @@
-package com.wnd.imd;
+package com.wnd.imd.di;
 
 import android.content.Context;
 

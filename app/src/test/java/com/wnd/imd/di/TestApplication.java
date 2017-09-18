@@ -1,7 +1,6 @@
-package com.wnd.imd;
+package com.wnd.imd.di;
 
-import com.wnd.imd.di.ApplicationComponent;
-import com.wnd.imd.di.DaggerApplicationComponent;
+import com.wnd.imd.IMDApplication;
 
 /**
  * Created by Wandy on 9/17/17.
