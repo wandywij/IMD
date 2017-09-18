@@ -1,9 +1,12 @@
 package com.wnd.imd.psi;
 
+import com.wnd.imd.Constant;
 import com.wnd.imd.interactor.PSIInteractor;
 import com.wnd.imd.networking.response.PSIResponseModel;
 
-import io.reactivex.Observable;
+import java.io.IOException;
+
+import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
@@ -18,13 +21,14 @@ import io.reactivex.subjects.BehaviorSubject;
 public class MainPresenter {
 
     private PSIInteractor interactor;
-    private BehaviorSubject<PSIResponseModel> behaviorSubject = BehaviorSubject.create();
+    private BehaviorSubject<PSIResponseModel> behaviorSubject;
 
     public MainPresenter(PSIInteractor interactor) {
         this.interactor = interactor;
     }
 
-    public void getIPS() {
+    public void getPSI() {
+        behaviorSubject = BehaviorSubject.create();
         interactor.getPSI()
                 .subscribeOn(Schedulers.io())
                 .subscribe(new Consumer<PSIResponseModel>() {
@@ -36,15 +40,21 @@ public class MainPresenter {
                 }, new Consumer<Throwable>() {
                     @Override
                     public void accept(@NonNull Throwable throwable) throws Exception {
-
+                        if(throwable instanceof IOException) {
+                            behaviorSubject.onError(new IOException(Constant.IS_NO_INTERNET_CONNECTION));
+                        } else {
+                            behaviorSubject.onError(new Exception());
+                        }
+                        behaviorSubject.onComplete();
                     }
                 });
     }
 
-    public Disposable onResume(Consumer<PSIResponseModel> getPSIResponseModel) {
-        getIPS();
+    public Disposable onResume(Consumer<PSIResponseModel> getPSIResponseModel, Consumer<Throwable> throwableConsumer) {
+        getPSI();
         return behaviorSubject.
                 observeOn(AndroidSchedulers.mainThread())
-                .subscribe(getPSIResponseModel);
+                .subscribe(getPSIResponseModel, throwableConsumer);
     }
+
 }

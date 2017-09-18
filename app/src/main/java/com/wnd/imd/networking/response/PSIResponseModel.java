@@ -17,6 +17,18 @@ public class PSIResponseModel {
         this.api_info = api_info;
     }
 
+    public Region_metadata[] getRegion_metadata() {
+        return region_metadata;
+    }
+
+    public ArrayList<Item> getItems() {
+        return items;
+    }
+
+    public Api_info getApi_info() {
+        return api_info;
+    }
+
     public static final class Region_metadata {
         public final String name;
         public final Label_location label_location;
@@ -26,6 +38,14 @@ public class PSIResponseModel {
             this.label_location = label_location;
         }
 
+        public String getName() {
+            return name;
+        }
+
+        public Label_location getLabel_location() {
+            return label_location;
+        }
+
         public static final class Label_location {
             public final double latitude;
             public final double longitude;
@@ -33,6 +53,14 @@ public class PSIResponseModel {
             public Label_location(double latitude, double longitude) {
                 this.latitude = latitude;
                 this.longitude = longitude;
+            }
+
+            public double getLatitude() {
+                return latitude;
+            }
+
+            public double getLongitude() {
+                return longitude;
             }
         }
     }
