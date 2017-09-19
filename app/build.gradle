@@ -58,4 +58,7 @@ dependencies {
 
     //google maps
     compile 'com.google.android.gms:play-services-maps:11.0.4'
+
+    //robolectric
+    testCompile "org.robolectric:robolectric:3.4.2"
 }
