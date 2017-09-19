@@ -7,8 +7,8 @@ android {
         applicationId "com.wnd.imd"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "0.9.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -58,4 +58,7 @@ dependencies {
 
     //google maps
     compile 'com.google.android.gms:play-services-maps:11.0.4'
+
+    //robolectric
+    testCompile "org.robolectric:robolectric:3.4.2"
 }

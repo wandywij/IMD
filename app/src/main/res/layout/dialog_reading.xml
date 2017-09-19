@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:paddingLeft="8dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/lblTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:paddingRight="16dp"
+        android:text="label1 :"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblDescription1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_toRightOf="@+id/lblTitle1"
+        android:paddingRight="16dp"
+        android:text="label1"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lblTitle1"
+        android:paddingRight="16dp"
+        android:text="label1 :"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblDescription2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblTitle1"
+        android:layout_toRightOf="@+id/lblTitle2"
+        android:paddingRight="16dp"
+        android:text="label1"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblTitle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lblTitle2"
+        android:paddingRight="16dp"
+        android:text="label1 :"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblDescription3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblTitle2"
+        android:layout_toRightOf="@+id/lblTitle3"
+        android:paddingRight="16dp"
+        android:text="label1"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblTitle4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lblTitle3"
+        android:paddingRight="16dp"
+        android:text="label1 :"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblDescription4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblTitle3"
+        android:layout_toRightOf="@+id/lblTitle4"
+        android:paddingRight="16dp"
+        android:text="label1"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblTitle5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lblTitle4"
+        android:paddingRight="16dp"
+        android:text="label1 :"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblDescription5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/lblTitle4"
+        android:layout_toRightOf="@+id/lblTitle5"
+        android:paddingRight="16dp"
+        android:text="label1"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblTitle6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lblTitle5"
+        android:paddingRight="16dp"
+        android:text="label1 :"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblDescription6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/lblTitle5"
+        android:layout_toRightOf="@+id/lblTitle6"
+        android:paddingRight="16dp"
+        android:text="label1"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblTitle7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lblTitle6"
+        android:paddingRight="16dp"
+        android:text="label1 :"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblDescription7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/lblTitle6"
+        android:layout_toRightOf="@+id/lblTitle7"
+        android:paddingRight="16dp"
+        android:text="label1"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblTitle8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lblTitle7"
+        android:paddingRight="16dp"
+        android:text="label1 :"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblDescription8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblTitle7"
+        android:layout_toRightOf="@+id/lblTitle8"
+        android:paddingRight="16dp"
+        android:text="label1"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblTitle9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lblTitle8"
+        android:paddingRight="16dp"
+        android:text="label1 :"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblDescription9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblTitle8"
+        android:layout_toRightOf="@+id/lblTitle9"
+        android:paddingRight="16dp"
+        android:text="label1"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblTitle10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lblTitle9"
+        android:paddingRight="16dp"
+        android:text="label1 :"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblDescription10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblTitle9"
+        android:layout_toRightOf="@+id/lblTitle10"
+        android:paddingRight="16dp"
+        android:text="label1"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblTitle11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lblTitle10"
+        android:paddingRight="16dp"
+        android:text="label1 :"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblDescription11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblTitle10"
+        android:layout_toRightOf="@+id/lblTitle11"
+        android:paddingRight="16dp"
+        android:text="label1"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblTitle12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lblTitle11"
+        android:paddingRight="16dp"
+        android:text="label1 :"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/lblDescription12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblTitle11"
+        android:layout_toRightOf="@+id/lblTitle12"
+        android:paddingRight="16dp"
+        android:text="label1"
+        android:textColor="@android:color/black" />
+</RelativeLayout>
